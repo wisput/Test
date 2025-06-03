@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>TFlex.DOCs.MacroIntergation</AssemblyName>
+    <PackageId>dc043168-22e2-49c1-b330-0c08d68bc53a</PackageId>
+    <AssemblyTitle>T-FLEX DOCs 17 Macro Integration</AssemblyTitle>
+    <RootNamespace>TFlex.DOCs.MacroFiles</RootNamespace>
+    <Description>Macro Integration</Description>
+    <FileVersion>17.5.2.64</FileVersion>
+    <InformationalVersion>17.5.2.64</InformationalVersion>
+    <AssemblyVersion>17.5.2.64</AssemblyVersion>
+    <Company>Top Systems</Company>
+    <Copyright>Copyright © 1989-2024 Top Systems, Ltd. All rights reserved.</Copyright>
+
+    <TargetFrameworks>net472</TargetFrameworks>
+    <DebugType>portable</DebugType>
+    <LangVersion>latest</LangVersion>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <NeutralLanguage>ru</NeutralLanguage>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <CodeAnalysisRuleSet>Global.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>CA1050, CA2007, NU1803, CA1707</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <DefineConstants>DEBUG;DIAGNOSTICS;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DefineConstants>RELEASE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Dynamic.Runtime" />
+
+    <Reference Include="TFlex.DOCs.Model" HintPath="C:\Program Files (x86)\T-FLEX DOCs 17 (17.5.2.64)\Program\TFlex.DOCs.Model.dll" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETCoreApp'">
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Dynamic.Runtime" />
+
+    <Reference Include="TFlex.DOCs.Model" HintPath="C:\Program Files (x86)\T-FLEX DOCs 17 (17.5.2.64)\Program\TFlex.DOCs.Model.dll" />
+  </ItemGroup>
+
+</Project>
